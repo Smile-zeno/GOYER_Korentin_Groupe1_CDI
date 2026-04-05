@@ -1,0 +1,340 @@
+/*root pour definir les variables et qu'elles soient accessible partout*/
+:root{
+    --text-color: black;
+    --background-color : goldenrod;
+    --background-line-color: cornflowerblue;
+    --background-card-color: deepskyblue;
+    --background-description-color: lightblue;
+    --background-diviser-color: black;
+    --background-footer-color: grey;
+}
+
+.dark {
+    --text-color: white;
+    --background-color : rgb(125, 91, 5);
+    --background-line-color: blue;
+    --background-card-color: darkblue;
+    --background-description-color: blue;
+    --background-diviser-color: blue;
+    --background-footer-color: dimgrey;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    background-color: var(--background-color);
+    transition: 0.5s;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: large;
+}
+
+a:hover{
+    color: gold;
+    text-shadow: 1px 1px black;
+}
+ /*séparation du header*/
+.presentation-header{
+    display: flex;
+    height: 50px;
+    background-color: var(--background-line-color);
+    border: 2px solid rgb(61, 108, 194);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.logo{
+    width: calc(100% /3);
+}
+
+.logo-img{
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.logo-img:hover{
+    scale: 1.1;
+    border-radius: 0%;
+}
+
+.nom{
+    color: var(--text-color);
+    width: calc(100% /3);
+    text-align: center;
+    align-content: center;
+    transition: 0.5s;
+}
+
+.nom:hover {
+    scale: 1.05;
+    text-shadow: 2px 2px 2px goldenrod;
+}
+
+.recherche{
+    display: flex;
+    justify-content: space-around;
+    width: calc(100% /3);
+    height: 2rem;
+    text-align: end;
+    align-content: center;
+}
+
+.darkMode{
+    text-align: center;
+    cursor: pointer;
+}
+
+/*Menu Burger*/
+.menu{
+    width: 10%;
+    position: fixed;
+    transform: translateY(-100%);
+    transition: 0.4s;
+    top: -1px;
+    right: 1%;
+    background: var(--background-line-color);
+    color: white;
+    list-style: none;
+    padding-top: 50px;
+    border: 2px, solid, var(--background-card-color);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.hamburger {
+    position: fixed; /*permet de garder le menu meme si on descend et de fermer le menu*/
+    right: 1%;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button {
+    transition: 0.4s;
+}
+
+button:hover {
+    scale: 1.2;
+    background-color: goldenrod;
+}
+
+.menuItem {
+    place-content: center;
+    padding: 5%;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+.menuIcon {
+    display: block;
+}
+
+.closeIcon {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/*Répartition de l'espace pour les cartes et le Pitch*/
+.presentation-carte-left{
+    opacity: 0;
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center;
+    transform: translateX(-1000px);
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    animation: carteLeft 1s ease-out 0s forwards;
+}
+
+.presentation-carte-right{
+    opacity: 0;
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center;
+    transform: translateX(0px);
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    animation: carteRight 1s ease-out 0.5s forwards;
+}
+
+/*organisation de la carte*/
+.carte{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: var(--background-card-color);
+    transition: 0.4s;
+}
+
+.carte:hover {
+    scale: 1.1;
+
+}
+
+/*centre l'image*/
+.image{
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/*centre le texte*/
+.texte_descriptif{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: var(--background-description-color);
+    transition: 0.5s;
+}
+
+.diviser-scroll{
+    width: 105%;
+    padding: 10px;
+    text-align: center;
+    transform: translateX(0);
+    background-color: var(--background-diviser-color);
+    color: gold;
+    transition: 0.5s;
+}
+
+/* Swiper horizontal */
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    padding-bottom: 2%;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/*organisation des autres pages*/
+.presentation-page{
+    display: flex;
+    opacity: 0;
+    justify-content: space-around;
+    text-align: center;
+    place-items: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    animation: fadeIn 0.7s ease-out forwards;
+}
+
+.texte_presentation{
+    color: var(--text-color);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: 0.5s;
+}
+
+.check{
+    margin: 5%;
+}
+
+.Pitch-Fiche{
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.texte_fiche{
+    padding: 5%;
+}
+
+/* 3D viewer */
+model-viewer {
+  width: 1000px;
+  height: 300px;
+  background-color: var(--background-color);
+  border: 2px solid var(--background-line-color);
+  transition: 0.5s;
+}
+
+/*organisation du footer*/
+.presentation-footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--background-footer-color);
+    transition: 0.5s;
+}
+
+.contacter{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reseaux{
+    margin: auto;
+}
+
+/*forcer la mise en colonne des éléments*/
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Animation */
+
+@keyframes carteLeft {
+    form {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes carteRight {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

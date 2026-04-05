@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/formu.css">
+    <title>Filmographie - page d'accueil</title>
+</head>
+<body>
+    <header>
+        <!--article pour diviser header en 3 parties-->
+        <article class="presentation-header" class="goingDarkLigne">
+            <div class="logo">
+                <a href="index.html"><img class="logo-img" src="image/clapperboard.png" alt="logo" style="height: 100%;"></a>
+            </div>
+            <div class="nom">
+                <h1>
+                    Filmographie
+                </h1>
+            </div>
+            <div class="recherche">
+                <input type="text" placeholder="Recherche">
+            </div><!-- Menu hamburger -->
+            <ul class="menu">
+                <li class="menuItem">
+                    <a class="menuItem" href="index.html"><img class="logo-img" src="image/clapperboard.png" alt="logo" style="height: 100%;"></a>
+                    <label for="menuItem">Page d'accueil</label>
+                </li>
+                <li class="menuItem">
+                    <a class="menuItem" href="Formulaire.html"><img class="logo-img" src="image/connexion.png" alt="Connexion" style="height: 100%;"></a>
+                    <label for="menuItem">Formulaire</label>
+                </li>
+                <li class="menuItem">
+                    <button class="darkMode" onclick="toggleTheme()">Dark Mode</button>
+                </li>
+            </ul>
+            <button class="hamburger"> <!-- on affiche ou non le texte nécessaire --> <!-- on affiche ou non le texte nécessaire -->
+                <p class="menuIcon">Menu</p>
+                <p class="closeIcon">fermer</p>
+            </button>
+        </article>
+    </header>
+    <main>
+        <article class="presentation-carte-left">
+            <div class="carte" style="width: 25%;height: auto;">
+                <!--carte diviser en 2 parties, image et résumé-->
+                <div>
+                    <a name="ImageTitanic" href="Titanic.html" >
+                        <!-- <img class="image" src="image/Titanic.jpg" alt="image_du_titanic" style="width: 85%;height: auto;"> -->
+                    </a>
+                </div>
+                <div>
+                    <h3>Fiche technique</h3>
+                    <p>Réalisateur: James Cameron<br>Acteur: Leonardo DiCaprio, Kate Winslet<br>Compositeur: James Horner</p>
+                </div>
+            </div>
+            <!--Description de la carte-->
+            <div id="TexteTitanic" class="texte_descriptif" style="width: 25%;height: auto;">
+                <!-- <h3>Pitch</h3> -->
+                <!-- <p>Southampton, 10 avril 1912. Le paquebot le plus grand et le plus moderne du monde, réputé pour son insubmersibilité, le "Titanic", appareille pour son premier voyage. Quatre jours plus tard, il heurte un iceberg. A son bord, un artiste pauvre et une grande bourgeoise tombent amoureux.</p> -->
+            </div>
+        </article>
+        <article class="presentation-carte-right">
+            <!--Description de la carte-->
+            <div id="TexteBatmanBegins" class="texte_descriptif" style="width: 25%;height: auto;">
+                <!-- <h3>Pitch</h3> -->
+                <!-- <p>Comment un homme seul peut-il changer le monde ? Telle est la question qui hante Bruce Wayne depuis cette nuit tragique où ses parents furent abattus sous ses yeux, dans une ruelle de Gotham City. Torturé par un profond sentiment de colère et de culpabilité, le jeune héritier de cette richissime famille fuit Gotham pour un long et discret voyage à travers le monde. Le but de ses pérégrinations : sublimer sa soif de vengeance en trouvant de nouveaux moyens de lutter contre l'injustice.</p> -->
+            </div>
+            <div class="carte" style="width: 25%;height: auto;">
+                <!--carte diviser en 2 parties, image et résumé-->
+                <div>
+                    <a name="ImageBatmanBegins" href="Batman_Begins.html">
+                        <!-- <img class="image" src="image/Batman-Begins.png" alt="Batman Begins" style="width: 85%;height: auto;"> -->
+                    </a>
+                </div>
+                <div>
+                    <h3>Fiche technique</h3>
+                    <p>Réalisateur: Christopher Nolan<br>Acteur: Christian Bale, Gary Oldman<br>Compositeur: Hans Zimmer</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <div>
+        <div class="diviser-scroll" class="goingDarkLigne">
+            <p>Retrouver les plus grands films du cinéma</p>
+        </div>
+        <!-- Swiper horizontal-->
+        <div class="swiper mySwiper">
+            <!-- wrapper est nécessaire -->
+            <div class="swiper-wrapper">
+                <!-- slides -->
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageArreteMoiSiTuPeux" href="Arrete_moi_si_tu_peux.html">
+                                <!-- <img class="image" src="image/Arrete_moi_si_tu_peux.webp" alt="Arrete moi si tu peux" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Steven Spielberg<br>Acteur: Leonardo DiCaprio, Tom Hanks<br>Compositeur: John Williams</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageThePhoenicianScheme" href="The_phoenician_scheme.html">
+                                <!-- <img class="image" src="image/The_phoenician_scheme.webp" alt="The phoenician scheme" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Wes Anderson<br>Acteur: Benicio Del Toro, Mia Threapleton<br>Compositeur: Alexandre Desplat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageIronMan" href="Iron_Man.html">
+                                <!-- <img class="image" src="image/Iron_man.webp" alt="Iron man" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Jon Favreau<br>Acteur: Robert Downey Jr., Terrance Howard<br>Compositeur: Ramin Djawadi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageLesAventuriersDeLArchePerdu" href="Les_aventuriers_de_l'arche_perdu.html">
+                                <!-- <img class="image" src="image/Les_aventuriers_de_l'arche_perdu.jpg" alt="Les aventuriers de l'Arche perdu" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Steven Spielberg<br>Acteur: Harrison Ford, Karen Allen<br>Compositeur: John Williams</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageSosFantomes" href="Sos_fantomes.html">
+                                <!-- <img class="image" src="image/Sos_fantomes.webp" alt="S.O.S Fantômes" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Ivan Reitman<br>Acteur: Bill Murray, Dan Aykroyd<br>Compositeur: Elmer Bernstein</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageGreenBook" href="Green_book.html">
+                                <!-- <img class="image" src="image/Green_book.jpg" alt="Green Book : Sur les routes du sud" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Peter Farrelly<br>Acteur: Viggo Mortensen, Mahershala Ali<br>Compositeur: Kristopher Bowers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageTitanic" href="Titanic.html">
+                                <!-- <img class="image" src="image/Titanic.jpg" alt="image_du_titanic" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: James Cameron<br>Acteur: Leonardo DiCaprio, Kate Winslet<br>Compositeur: James Horner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carte" style="width: 500px;height: auto;">
+                        <div>
+                            <a name="ImageBatmanBegins" href="Batman_Begins.html">
+                                <!-- <img class="image" src="image/Batman-Begins.png" alt="Batman Begins" style="width: 85%;height: auto;"> -->
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Fiche technique</h3>
+                            <p>Réalisateur: Christopher Nolan<br>Acteur: Christian Bale, Gary Oldman<br>Compositeur: Hans Zimmer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <footer>
+        <!--article pour diviser footer en plusieurs parties-->
+        <article class="presentation-footer" class="goingDarkLigne">
+            <div class="contacter">
+                <p>Nous contacter : <a href="https://youtu.be/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ">on a pas de lien</a></p>
+            </div>
+            <div class="reseaux">
+                <p>Nos réseaux : <a href="https://youtu.be/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ">on a toujours pas de lien</a></p>
+            </div>
+        </article>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="Javascript/main.js"></script>
+    <!-- API the movie data base -->
+    <script type="text/javascript"><!-- Information pour Titanic -->
+        function fetchTitanic() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/597?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayTitanic() {
+            const data = await fetchTitanic();
+            var list = document.getElementsByName("ImageTitanic") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+            document.getElementById("TexteTitanic").innerHTML = `
+            <h3>${data.title}</h3>
+            <p>${data.overview}</p>
+            `
+        }
+    displayTitanic();
+    </script>
+    <script type="text/javascript"><!-- Information pour Batman Begins -->
+        function fetchBatman_Begins() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/272?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayBatman_Begins() {
+            const data = await fetchBatman_Begins();
+            var list = document.getElementsByName("ImageBatmanBegins") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+            document.getElementById("TexteBatmanBegins").innerHTML = `
+            <h3>${data.title}</h3>
+            <p>${data.overview}</p>
+            `
+        }
+    displayBatman_Begins();
+    </script>
+    <script type="text/javascript"><!-- Information pour Arrete moi si tu peux -->
+        function fetchArreteMoiSiTuPeux() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/640?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayArreteMoiSiTuPeux() {
+            const data = await fetchArreteMoiSiTuPeux();
+            var list = document.getElementsByName("ImageArreteMoiSiTuPeux") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+        }
+    displayArreteMoiSiTuPeux();
+    </script>
+    <script type="text/javascript"><!-- Information pour The phoenician scheme -->
+        function fetchThePhoenicianScheme() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/1137350?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayThePhoenicianScheme() {
+            const data = await fetchThePhoenicianScheme();
+            var list = document.getElementsByName("ImageThePhoenicianScheme") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+        }
+    displayThePhoenicianScheme();
+    </script>
+    <script type="text/javascript"><!-- Information pour Iron Man -->
+        function fetchIronMan() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/1726-iron-man?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayIronMan() {
+            const data = await fetchIronMan()
+            var list = document.getElementsByName("ImageIronMan") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+        }
+    displayIronMan();
+    </script>
+    <script type="text/javascript"><!-- Information pour Les aventuriers de l arche perdu -->
+        function fetchLesAventuriersDeLArchePerdu() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/85?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayLesAventuriersDeLArchePerdu() {
+            const data = await fetchLesAventuriersDeLArchePerdu();
+            var list = document.getElementsByName("ImageLesAventuriersDeLArchePerdu") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+        }
+    displayLesAventuriersDeLArchePerdu();
+    </script>
+    <script type="text/javascript"><!-- Information pour SOS Fantomes -->
+        function fetchSosFantomes() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/620?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displaySosFantomes() {
+            const data = await fetchSosFantomes();
+            var list = document.getElementsByName("ImageSosFantomes") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+        }
+    displaySosFantomes();
+    </script>
+    <script type="text/javascript"><!-- Information pour Green Book -->
+        function fetchGreenBook() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/490132?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayGreenBook() {
+            const data = await fetchGreenBook();
+            var list = document.getElementsByName("ImageGreenBook") // getElementsByName renvoie une liste ce qui permet d'aaficher l'image à plusieurs endroits en même temps
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+        }
+    displayGreenBook();
+    </script>
+</body>
+</html>

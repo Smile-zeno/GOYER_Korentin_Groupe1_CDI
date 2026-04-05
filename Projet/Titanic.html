@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" /> -->
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/formu.css">
+    <title>Filmographe - Titanic</title>
+</head>
+<body>
+    <header>
+        <!--article pour diviser header en 3 parties-->
+        <article class="presentation-header">
+            <div class="logo">
+                <a href="index.html"><img class="logo-img" src="image/clapperboard.png" alt="logo" style="height: 100%;"></a>
+            </div>
+            <div class="nom">
+                <h1>
+                    Filmographe
+                </h1>
+            </div><!-- Menu hamburger -->
+            <ul class="menu">
+                <li class="menuItem">
+                    <a class="menuItem" href="index.html"><img class="logo-img" src="image/clapperboard.png" alt="logo" style="height: 100%;"></a>
+                    <label for="menuItem">Page d'accueil</label>
+                </li>
+                <li class="menuItem">
+                    <a class="menuItem" href="Formulaire.html"><img class="logo-img" src="image/connexion.png" alt="Connexion" style="height: 100%;"></a>
+                    <label for="menuItem">Formulaire</label>
+                </li>
+                <li class="menuItem">
+                    <button class="darkMode" onclick="toggleTheme()">Dark Mode</button>
+                </li>
+            </ul>
+            <button class="hamburger"> <!-- on affiche ou non le texte nécessaire -->
+                <p class="menuIcon">Menu</p>
+                <p class="closeIcon">fermer</p>
+            </button>
+        </article>
+    </header>
+    <main>
+        <article class="presentation-page">
+            <div name="ImageTitanic" style="width: 50%;height: auto;"></div>
+            <div class="texte_presentation" style="width: 50%;height: auto;">
+                <div id="TitreTitanic" ></div>
+                <div class="check">
+                    <input type="checkbox"><label>J'ai vu ce film</label><br>
+                </div>
+                <div id="TexteTitanic"></div>
+                <div>
+                    <h3 class="Pitch-Fiche">Fiche technique</h3>
+                    <p class="texte_fiche">Réalisateur:<br>James Cameron<br>Acteur:<br>Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher, Gloria Stuart, Bill Paxton, Bernard Hill<br>Compositeur:<br>James Horner</p>
+                </div>
+            </div>
+        </article>
+        <!-- Model 3D -->
+        <model-viewer src="image/3D object/scene_medievale.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="image/3D object/poster.webp" shadow-intensity="1"></model-viewer>
+    </main>
+    <footer>
+        <!--article pour diviser footer en plusieurs parties-->
+        <article class="presentation-footer">
+            <div class="contacter">
+                <p>Nous contacter : <a href="https://youtu.be/FtE6SV_1wu4?list=RDFtE6SV_1wu4">on a pas de lien</a></p>
+            </div>
+            <div class="reseaux">
+                <p>Nos réseaux : <a href="https://youtu.be/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ">on a toujours pas de lien</a></p>
+            </div>
+        </article>
+    </footer>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="Javascript/main.js"></script>
+    <!-- API the movie data base -->
+    <script type="text/javascript"><!-- Information pour Titanic -->
+        function fetchTitanic() {
+            return fetch(
+                'https://api.themoviedb.org/3/movie/597?api_key=b408120da29830089d811abdd668f258&language=fr-FR'
+            ).then((response) => response.json())
+        }
+        async function displayTitanic() {
+            const data = await fetchTitanic();
+            var list = document.getElementsByName("ImageTitanic")
+            list.forEach(Image => {
+                Image.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="image" style="width: 85%; height: auto;"/>
+            `
+            });
+            document.getElementById("TitreTitanic").innerHTML = `<h1>${data.title}</h1>`
+            document.getElementById("TexteTitanic").innerHTML = `<h3 class="Pitch-Fiche">Pitch</h3>
+            <p>${data.overview}</p>`
+        }
+    displayTitanic();
+    </script>
+    <!-- API the movie data base avec la clé dans un autre fichier pour la cacher-->
+    <!-- <script type="text/javascript">
+        const url = `Php/InfoFilm.php?film='Titanic'`;
+        // requete HTTP vers notre fichier php
+        fetch(url)
+            .then(response => {
+                console.log(response); // Voir ce qu'il y a dans response
+                if (!response.ok) {
+                    throw new Error('Erreur reseau ou API');
+                }
+                return response.json();
+            }).then(data => {
+                document.getElementById('ImageTitanic').innerHTML = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" />`
+                document.getElementById('TitreTitanic').innerHTML = `<h1>${data.title}</h1>`
+                document.getElementById('TexteTitanic').innerHTML = `<p>${data.overview}</p>`
+            }).catch(error => {
+                console.log('Erreur : ' . error);
+            });
+    </script> -->
+    <!-- V2 pour l'API the movie data base -->
+     <!-- <script type="text/javascript" onload="true">
+        function fetchTitanic() {
+            const url = `Php/InfoFilm.php?film='Titanic'`;
+            return fetch(url).then((response) => response.json())
+        }
+
+        async function displayTitanic() {
+            const data = await fetchTitanic();
+            document.getElementById("ImageTitanic").innerHTML = `
+            <h1>${data.title}</h1>
+            <h2>${data.overview}</h2>
+            <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" />
+            `
+        }
+
+    displayTitanic();
+
+    </script> -->
+</body>
+</html>
