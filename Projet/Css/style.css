@@ -21,7 +21,7 @@
 
 * { 
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
 }
 
 html, body{
@@ -119,6 +119,7 @@ a:hover{
 }
 
 button {
+    padding: 3px;
     transition: 0.4s;
 }
 
@@ -150,6 +151,15 @@ button:hover {
 label {
     display: block;
     margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.avi {
+    place-content: center;
+    padding: 5%;
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 1rem;
 }
 
 /*Répartition de l'espace pour les cartes et le Pitch*/
@@ -282,7 +292,24 @@ model-viewer {
   transition: 0.5s;
 }
 
+/* CRUD */
+.CRUD{
+    height: auto;
+    width: 80%;
+    padding: 10%;
+}
+
+.CRUD_element{
+    margin-bottom: 2%;
+}
+
 /*organisation du footer*/
+.trop_petit{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;  
+}
+
 .presentation-footer{
     display: flex;
     justify-content: space-evenly;
